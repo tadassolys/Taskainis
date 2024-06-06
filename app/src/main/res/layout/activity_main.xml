@@ -1,0 +1,124 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Taškainis!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@drawable/gradient_text_color"/>
+
+        <EditText
+            android:id="@+id/playerNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerSpinner"
+            android:layout_centerHorizontal="true"
+            android:hint="Įveskite žaidėjo vardą:" />
+
+        <Button
+            android:id="@+id/prevPlayerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerSpinner"
+            android:layout_marginTop="164dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/playerNameEditText"
+            android:text="❮" />
+
+        <Button
+            android:id="@+id/nextPlayerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerSpinner"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="164dp"
+            android:layout_toRightOf="@+id/playerNameEditText"
+            android:text="❯" />
+
+        <Button
+            android:id="@+id/addPlayerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerNameEditText"
+            android:layout_centerHorizontal="true"
+            android:text="Pridėti žaidėją" />
+
+        <Spinner
+            android:id="@+id/playerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:minHeight="64dp"/>
+
+        <EditText
+            android:id="@+id/scoreInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerSpinner"
+            android:layout_marginTop="101dp"
+            android:digits="-0123456789"
+            android:hint="Rezultatas:"
+            android:inputType="numberSigned" />
+        />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scoreInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="PRIDĖTI" />
+
+        <Button
+            android:id="@+id/showButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="REZULTATAI" />
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="510dp"
+            android:text="Rezultatų istorija" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/showButton"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/scoresText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </ScrollView>
+
+    </RelativeLayout>
+</ScrollView>
+
